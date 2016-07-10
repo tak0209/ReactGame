@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "postinstall": "typings install --global --save dt~react dt~react-dom"
+  "scripts": {   //npm run <script-name>   i,e: npm run tsc
+    "postinstall": "typings install --global --save dt~react dt~react-dom",
+    "host": "webpack-dev-server",
+    "tsc": "tsc"
   },
   "author": "",
   "license": "ISC",
