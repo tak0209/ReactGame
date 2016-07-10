@@ -1,7 +1,8 @@
 import * as React from "react";
 
-export class Greeting extends React.Component<{}, {}> {
+export interface GreetingProps { name: string }
+export class Greeting extends React.Component<GreetingProps, {}> {
     render() {
-        return <h1>Welcome to React with hot sync!</h1>;
+        return <h1>Welcome {this.props.name} to React with hot sync!</h1>;
     }
 }

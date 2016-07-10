@@ -5,7 +5,7 @@ import { Hello } from "./components/Hello";
 import { Greeting } from "./components/Greeting";
 
 ReactDOM.render(
-    <Greeting />,
+    <Greeting name='sir' />,
     document.getElementById("welcome")
 );
 
