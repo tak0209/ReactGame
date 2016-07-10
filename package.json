@@ -6,11 +6,13 @@
   "scripts": {
     "postinstall": "typings install --global --save dt~react dt~react-dom",
     "web": "webpack-dev-server",
+    "webpack": "webpack",
     "tsc": "tsc"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "react-hot-loader": "^1.3.0",
     "source-map-loader": "^0.1.5",
     "ts-loader": "^0.8.2",
     "typescript": "^1.8.10",

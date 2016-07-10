@@ -1,19 +1,34 @@
+var path = require('path');
+var webpack = require('webpack');
+
+var commonPlugin = new webpack.optimize.CommonsChunkPlugin('shared.js');
+
 module.exports = {
-    entry: "./app/index.tsx",
+    //entry: "./app/index.tsx",
+    entry: {
+        index: './app/index.tsx'
+
+    },
     output: {
-        path: __dirname + "/app/bin/",
-        filename: "bundle.js",
+        path: path.join(__dirname, '/app/bin/'),
+        filename: "[name].js",
         publicPath: "/bin/"                                 //webpack server result path
     },
+
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        commonPlugin
+    ],
 
     // Enable sourcemaps for debugging webpack's output.
     devtool: "source-map",
 
     devServer: {
-        contentBase: __dirname + "/app",                    //dev server local path
+        contentBase: path.join(__dirname, '/app'),                    //dev server local path
         colors: true,
         historyApiFallback: true,
-        inline: true
+        inline: true,
+        hot: true
     },
 
     resolve: {
@@ -24,7 +39,7 @@ module.exports = {
     module: {
         loaders: [
             // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
-            { test: /\.tsx?$/, loader: "ts-loader" }
+            { test: /\.tsx?$/, loaders: ['react-hot', 'ts-loader'] }
         ],
 
         // preLoaders: [

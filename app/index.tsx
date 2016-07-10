@@ -2,6 +2,12 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 
 import { Hello } from "./components/Hello";
+import { Greeting } from "./components/Greeting";
+
+ReactDOM.render(
+    <Greeting />,
+    document.getElementById("welcome")
+);
 
 ReactDOM.render(
     <Hello compiler="TypeScript" framework="React" />,
