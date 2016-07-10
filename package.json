@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {   //npm run <script-name>   i,e: npm run tsc
+  //npm run <script-name>   i,e: npm run tsc
+  "scripts": { 
     "postinstall": "typings install --global --save dt~react dt~react-dom",
     "host": "webpack-dev-server",
     "tsc": "tsc"
