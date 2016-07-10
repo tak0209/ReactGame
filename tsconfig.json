@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",    //this only use for local dev debug which not bundling
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "target": "es5",
+        "jsx": "react"
+    },
+    "exclude": [
+        "node_modules",
+        //"typings/globals",      
+        "typings/typings"   //excluding the reference to the duplicate typings for react and react-dom
+    ]
+}
