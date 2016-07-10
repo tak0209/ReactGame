@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "typings install --global --save dt~react dt~react-dom",
-    "host": "webpack-dev-server",
+    "web": "webpack-dev-server",
     "tsc": "tsc"
   },
   "author": "",
