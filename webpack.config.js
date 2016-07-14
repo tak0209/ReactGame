@@ -1,7 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 
-var commonPlugin = new webpack.optimize.CommonsChunkPlugin('shared.js');
+//var commonPlugin = new webpack.optimize.CommonsChunkPlugin('shared.js');
 
 module.exports = {
     //entry: "./app/index.tsx",
@@ -16,8 +16,8 @@ module.exports = {
     },
 
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        commonPlugin
+        new webpack.HotModuleReplacementPlugin()
+        //commonPlugin
     ],
 
     // Enable sourcemaps for debugging webpack's output.

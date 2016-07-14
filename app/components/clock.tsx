@@ -4,10 +4,11 @@ class elapsedState {
     secondsElapsed: number;
 }
 export class Timer extends React.Component<void, elapsedState>{
+    interval : any;
     constructor() {
         super();
         // set initial state
-        this.state = { secondsElapsed: 0 };
+        this.state = { secondsElapsed: 100 };
     }
 
     tick = () => {
@@ -17,12 +18,12 @@ export class Timer extends React.Component<void, elapsedState>{
     };
 
     componentDidMount() {
-        setInterval(this.tick, 1000);
+       this.interval = setInterval(this.tick, 1000);
         //setInterval(()=>{ this.setState({secondsElapsed: this.state.secondsElapsed + 1}) }, 1000);
     };
 
     componentWillUnmount() {
-        //clearInterval(this.interval);
+        clearInterval(this.interval);
     };
 
     render() {
