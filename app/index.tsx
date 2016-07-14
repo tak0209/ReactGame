@@ -4,6 +4,7 @@ import * as ReactDOM from "react-dom";
 import './main.scss';
 import { Hello } from "./components/Hello";
 import { Greeting } from "./components/Greeting";
+import { Timer } from "./components/Clock";
 
 ReactDOM.render(
     <Greeting name='sir' />,
@@ -13,4 +14,9 @@ ReactDOM.render(
 ReactDOM.render(
     <Hello compiler="TypeScript" framework="React" />,
     document.getElementById("example")
+);
+
+ReactDOM.render(
+    <Timer />,
+    document.getElementById("timerPlace")
 );
