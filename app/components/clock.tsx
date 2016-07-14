@@ -1,6 +1,6 @@
 import * as React from "react";
 
-class timerState {
+interface timerState {
     secondsElapsed: number;
     bgColor: string;
     caption: string;
@@ -49,7 +49,7 @@ export class Timer extends React.Component<void, timerState>{
         return (
             <div style={{ fontSize: 2 + 'em', backgroundColor: this.state.bgColor }}>Seconds Elapsed: {this.state.secondsElapsed}
                 <span style={{ paddingLeft: '15px' }} ></span>
-                <button class="btn btn-lg btn-primary" type="button" onClick={this.handleClick}>{this.state.caption}</button>
+                <button className="btn btn-lg btn-primary" type="button" onClick={this.handleClick}>{this.state.caption}</button>
             </div>
         );
     }
