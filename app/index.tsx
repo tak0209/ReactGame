@@ -8,7 +8,7 @@ import { Greeting } from "./components/Greeting";
 import { Timer } from "./components/Clock";
 
 ReactDOM.render(
-    <Greeting name='sir' />,
+    <Greeting names='odetocode, tak0209, project365' />,
     document.getElementById("welcome")
 );
 

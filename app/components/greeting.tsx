@@ -1,8 +1,29 @@
 import * as React from "react";
+import Card from "./card";
+import Users from "./users";
 
-export interface GreetingProps { name: string }
-export class Greeting extends React.Component<GreetingProps, {}> {
+export interface GreetingState { username: string }
+export interface GreetingProps { names: string }
+
+export class Greeting extends React.Component<GreetingProps, GreetingState> {
+    constructor() {
+        super();
+        this.state = {
+            username: ''
+        }
+    }
+
+    selectionChange = (e:any) => {
+        this.setState({ username: e.target.value });
+    }
+    
     render() {
-        return <h1>Welcome {this.props.name} to React with hot sync!! Sandbox</h1>;
+        return (
+            <div>
+                <Users usernames={this.props.names} selectionChangeHandler ={this.selectionChange} />
+                <h1>Welcome {this.state.username} to React with hot sync!!Sandbox</h1>
+                <Card username={this.state.username} />
+            </div>
+        );
     }
 }
