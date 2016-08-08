@@ -8,6 +8,7 @@ export interface cardProps {
 export interface cardState {
     data: any;
 }
+
 export default class Card extends React.Component<cardProps, cardState>{
     constructor() {
         super();
@@ -17,13 +18,13 @@ export default class Card extends React.Component<cardProps, cardState>{
         }
     }
 
-    renderUserInfo() {
+    getUserInfo() {
         $.get("https://api.github.com/users/" + this.props.username, (response) => {
             this.setState({ data: response });
         })
     };
 
-    //why this rendering got called twice
+    // render get call when binded state change
     render() {
         if (this.state.data.avatar_url) {
             var url = this.state.data.avatar_url;
@@ -36,12 +37,13 @@ export default class Card extends React.Component<cardProps, cardState>{
                     <h3>Name: {this.state.data.login}</h3>
                     <h3>Created: {this.state.data.created_at}</h3>
                     <hr/>
+                    <textarea rows="4" cols="120" value={JSON.stringify(this.state.data, null, '\t')}></textarea>
                 </div>
             );
         }
-        else {
+        else {  //if username is selected then get user info
             if (this.props.username)
-                this.renderUserInfo();
+                this.getUserInfo();
         }
 
         return (<div>...</div>);
