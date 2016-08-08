@@ -16,12 +16,12 @@ export class Greeting extends React.Component<GreetingProps, GreetingState> {
     selectionChange = (e:any) => {
         this.setState({ username: e.target.value });
     }
-    
+
     render() {
         return (
             <div>
                 <Users usernames={this.props.names} selectionChangeHandler ={this.selectionChange} />
-                <h1>Welcome {this.state.username} to React with hot sync!!Sandbox</h1>
+                <h2>Welcome {this.state.username} to React with hot sync!</h2>
                 <Card username={this.state.username} />
             </div>
         );

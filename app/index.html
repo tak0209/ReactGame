@@ -14,39 +14,48 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <div class="row">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Welcome</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div id="welcome"></div>
-                        </div>
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">ACME</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="http://www.yahoo.com" target="_new">yahoo</a></li>
+            <li><a href="http://www.msn.com" target="_new">msn</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Welcome</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div id="welcome"></div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Timer</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div id="timerPlace"></div>
-                        </div>
+            </div>
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Timer</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div id="timerPlace"></div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Dependencies -->
-        <!--<script src="bin/react.min.js"></script>
+    <!-- Dependencies -->
+    <!--<script src="bin/react.min.js"></script>
         <script src="bin/react-dom.min.js"></script>-->
 
-        <!-- Main -->
-        <!--<script src="/bin/shared.js"></script>-->
-        <script src="/bin/index.js"></script>
+    <!-- Main -->
+    <!--<script src="/bin/shared.js"></script>-->
+    <script src="/bin/index.js"></script>
 </body>
 
 </html>

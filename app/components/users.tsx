@@ -10,6 +10,7 @@ export default class Users extends React.Component<UsersProps, {}>
     render() {
         return (
             <div>
+                Users:&nbsp;
                 <select onChange={this.props.selectionChangeHandler } >
                     { this.renderListItems() }
                 </select>

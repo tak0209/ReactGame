@@ -34,10 +34,10 @@ export default class Card extends React.Component<cardProps, cardState>{
             return (
                 <div>
                     <img src={url} width="80" />
-                    <h3>Name: {this.state.data.login}</h3>
-                    <h3>Created: {this.state.data.created_at}</h3>
+                    <h4>Name: {this.state.data.login}</h4>
+                    <h4>Created: {this.state.data.created_at}</h4>
                     <hr/>
-                    <textarea rows="4" cols="120" value={JSON.stringify(this.state.data, null, '\t')}></textarea>
+                    <textarea rows="4" style={{width:'100%'}} value={JSON.stringify(this.state.data, null, '\t')}></textarea>
                 </div>
             );
         }
