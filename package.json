@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "typings install --global --save dt~react dt~react-dom dt~bootstrap dt~jquery",
+    "postinstall": "typings install --global --save  dt~react dt~react-dom dt~bootstrap dt~jquery",
     "web": "webpack-dev-server",
     "webpack": "webpack",
     "tsc": "tsc"
