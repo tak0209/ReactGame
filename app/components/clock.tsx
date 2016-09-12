@@ -6,7 +6,7 @@ interface timerState {
     caption: string;
 }
 
-export class Timer extends React.Component<void, timerState>{
+export default class Timer extends React.Component<void, timerState>{
     interval: number;
     isTimerOn: boolean;
     constructor() {

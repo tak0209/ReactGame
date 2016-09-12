@@ -5,7 +5,7 @@ import Users from "./users";
 export interface GreetingState { username: string }
 export interface GreetingProps { names: string }
 
-export class Greeting extends React.Component<GreetingProps, GreetingState> {
+export default class Greeting extends React.Component<GreetingProps, GreetingState> {
     constructor() {
         super();
         this.state = {
