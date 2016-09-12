@@ -26,4 +26,4 @@ export default class Button extends React.Component<void, ButtonState>{
             data : {'name': 'abc'}
         })
     }
-}
+} 
