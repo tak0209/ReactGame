@@ -18,11 +18,12 @@ export default class Users extends React.Component<UsersProps, {}>
         );
     }
 
+    //built select options
     renderListItems() {
         var items = this.props.usernames.split(",");
         var selections: any = [];
         items.forEach(element => {
-            selections.push(<option value={element.trim()}>{element.trim()}</option>);
+            selections.push(<option key={element.trim()} value={element.trim()}>{element.trim()}</option>);
         });
 
         return selections;

@@ -2,28 +2,28 @@ import * as React from 'react';
 import * as $ from 'jquery';
 
 // Interface for compenent state
-export interface ButtonState {
+export interface CounterState {
     //i,e data: {'name' : string};
-    data: any;
+    counter: number;
 }
 
-export default class Button extends React.Component<void, ButtonState>{
+export default class Counter extends React.Component<void, CounterState>{
     constructor() {
         super();
         // set initial state
         this.state = {
-            data: { 'name' :'test' }
+            counter: 0
         }
     }
 
     render() {
         //code
-        return (<button onClick={this.handleClick}>{this.state.data.name}</button>);
+        return (<button onClick={this.handleClick}>{this.state.counter}</button>);
     }
 
     handleClick = () => {
         this.setState( {
-            data : {'name': 'abc'}
+            counter : this.state.counter + 1
         })
     }
-} 
+}
