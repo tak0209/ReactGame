@@ -14,7 +14,7 @@ export default class Timer extends React.Component<void, timerState>{
         // set initial state
         this.state = {
             secondsElapsed: 100,
-            bgColor: 'white',
+            bgColor: 'white',   
             caption: 'off'
         };
         this.isTimerOn = true;

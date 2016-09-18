@@ -18,12 +18,6 @@ export default class Card extends React.Component<cardProps, cardState>{
         }
     }
 
-    getUserInfo() {
-        $.get("https://api.github.com/users/" + this.props.username, (response) => {
-            this.setState({ data: response });
-        })
-    };
-
     // render get call when binded state change
     render() {
         if (this.state.data.avatar_url) {
@@ -48,5 +42,11 @@ export default class Card extends React.Component<cardProps, cardState>{
 
         return (<div>...</div>);
     }
+
+    getUserInfo() {
+        $.get("https://api.github.com/users/" + this.props.username, (response) => {
+            this.setState({ data: response });
+        })
+    };
 }
 

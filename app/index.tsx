@@ -8,6 +8,7 @@ import WhatTimer  from "./components/Clock";
 // import MyButton from "./components/Button";
 import MyCounter from "./components/Counter";
 import MyScorePanel from "./components/ScorePanel";
+import GCard from "./components/gitCard";
 
 ReactDOM.render(
     <Greeting names='aboodman, odetocode, shanselman, tak0209, project365' />,
@@ -31,4 +32,9 @@ ReactDOM.render(
         <MyScorePanel incrementStep={100} />
     </div>,
     document.getElementById('scorePanelId')
+);
+
+ReactDOM.render(
+    <GCard  />,
+    document.getElementById('gitCardId')
 );
