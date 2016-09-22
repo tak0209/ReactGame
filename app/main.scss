@@ -1,68 +1,63 @@
-$color: black;
-
-body {
-    color: $color;
+#stars-frame .glyphicon {
+  margin: 0.3em;
+  font-size: 1.7em;
 }
 
-/* Carousel */
-#quote-carousel {
-    padding: 0 10px 30px 10px;
-    margin-top: 30px;
-    /* Control buttons  */
-    /* Previous button  */
-    /* Next button  */
-    /* Changes the position of the indicators */
-    /* Changes the color of the indicators */
+#stars-frame, #answer-frame {
+  width: 40%;
+  float:left;
 }
-#quote-carousel .carousel-control {
-    background: none;
-    color: #CACACA;
-    font-size: 2.3em;
-    text-shadow: none;
-    margin-top: 30px;
+
+#button-frame {
+  width:10%;
+  float:left;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
-#quote-carousel .carousel-control.left {
-    left: -60px;
+
+#stars-frame .well, #answer-frame .well {
+  height: 150px;
 }
-#quote-carousel .carousel-control.right {
-    right: -60px;
+
+#num-frame {
+  display: inline-block;
+  width: 100%;
 }
-#quote-carousel .carousel-indicators {
-    right: 50%;
-    top: auto;
-    bottom: 0px;
-    margin-right: -19px;
+
+#num-frame .number, #answer-frame span{
+  display: inline-block;
+  margin: 0.5em;
+  background-color: #bbb;
+  width: 30px;
+  text-align: center;
+  font-size:22px;
+  border-radius:50%;
+  color: blue;
+  cursor: pointer;
 }
-#quote-carousel .carousel-indicators li {
-    width: 50px;
-    height: 50px;
-    margin: 5px;
-    cursor: pointer;
-    border: 4px solid #CCC;
-    border-radius: 50px;
-    opacity: 0.4;
-    overflow: hidden;
-    transition: all 0.4s;
-}
-#quote-carousel .carousel-indicators .active {
-    background: #333333;
-    width: 128px;
-    height: 128px;
-    border-radius: 100px;
-    border-color: #f33;
-    opacity: 1;
-    overflow: hidden;
-}
-.carousel-inner {
-    min-height: 300px;
-}
-.item blockquote {
-    border-left: none;
-    margin: 0;
-}
-.item blockquote p:before {
-    content: "\f10d";
-    font-family: 'Fontawesome';
-    float: left;
-    margin-right: 10px;
-}
+
+// #numbers-frame .number, #answer-frame .well span {
+//   display: inline-block;
+//   margin: 0.5em;
+//   background-color: #bbb;
+//   width: 30px;
+//   text-align: center;
+//   font-size:22px;
+//   border-radius:50%;
+//   color: blue;
+//   cursor: pointer;
+// }
+
+// #numbers-frame .selected-true {
+//    background-color: #e8e8e8; 
+//    color: #ddd;
+//    cursor: not-allowed;
+// }
+
+// #numbers-frame .used-true {
+//    background-color: #aaffaa; 
+//    color: #99bb99;
+//    cursor: not-allowed;
+// }
